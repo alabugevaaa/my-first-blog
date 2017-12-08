@@ -7,10 +7,12 @@
 	<div>
 		<h1><a href="">Мой блог</a></h1>
 	</div>
-	<div>
-		<p>Публикация: 14.08.2017</p>
-		<h2><a href="">Моя первая публикация</a></h2>
-		<p>Бла бла бла</p>
-	</div>
+	{% for post in posts %}
+		<div>
+			<h2><a href="">{{ post.title }}</a></h2>
+			<span>Опубликовано: {{ post.published_date }}</span>
+			<p>{{ post.text|linebreaksbr }}</p>
+		</div>	
+	{% endfor %}
 </body>
 </html>
