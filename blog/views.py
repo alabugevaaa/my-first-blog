@@ -42,3 +42,6 @@ def post_edit(request, pk):
 		form = PostForm(instance=post) #создаем форму с экземпляром объекта
 
 	return render(request, 'blog/post_edit.html', {'form': form})
+
+def sqrt(request):
+	return render(request, 'blog/sqrt.html')
